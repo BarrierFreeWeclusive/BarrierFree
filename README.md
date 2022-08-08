@@ -2,7 +2,7 @@
 
 여행에 편의를 더하다, `BarrierFree`
 <br/>
-<div align="center"><img src="/uploads/5d78c41c5827f7b98e47740485ba95a9/logo.png" alt="logo" width="40%"/></div><br>
+<div align="center"><img src="./PIC/logo.png" alt="logo" width="40%"/></div><br>
 <br/>
 
 ---
@@ -19,6 +19,7 @@
         - [4️⃣ 프로젝트 산출물](#4️⃣-프로젝트-산출물)
         - [5️⃣ 프로젝트 제출물](#5️⃣-프로젝트-제출물)
     - [프로젝트 영상](#프로젝트-영상)
+    - [프로젝트 결과](#프로젝트-결과)
 <br/>
 
 ---
@@ -27,7 +28,7 @@
 
 ### - 팀 이름
 
-<img src ="/uploads/74b03848861f31c07eb417ce0f52ce6a/그림3.png" alt="팀 이름" width="60%">
+<img src ="./PIC/3.png" alt="팀 이름" width="60%">
 
 ### - 팀원 소개
 
@@ -37,7 +38,7 @@
 | 남정현 | 팀원 | Frontend, React, Redux 기반 및 EC2 서버 통신            |
 | 정현정 | 팀원 | Frontend, React, Redux 기반 및 지오로케이션 활용            |
 | 허은아 | 팀원 | Backend, Open API 통신 및 Token 담당, DB 설계             |
-| 황수진 | 팀원 | Backend, DB 설계, QA             |
+| 황수진 | 팀원 | Backend, DB 설계             |
 
 <br/>
 
@@ -65,24 +66,24 @@
 
 ### 2️⃣ 프로젝트
 
-<img src ="/uploads/57c37cdfa20ff0ee9f7d209e07eafd13/about_project.jpg" alt="팀 소개" width="80%"/>
+<img src ="./PIC/about_project.jpg" alt="팀 소개" width="80%"/>
 <br>
 
   - [프로젝트 고려 사항](./docs/about_project.md)
 
 ### 3️⃣ 기술 스택
 
-<img src ="/uploads/74f72a87c073c739b49279937acf312d/아키텍쳐.png" alt="아키텍쳐" width="80%"/>
+<img src ="./PIC/aa.png" alt="아키텍쳐" width="80%"/>
 
 <br>
 
-- `FrontEnd` : React, Node.js, Redux, Material-UI
-- `BackEnd` : SpringBoot, JPA, MySQL, Lombok
-- `DevOps` : GitLab, Jenkins, Docker, JIRA, AWS EC2
+- `FrontEnd` : <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=MUI&logoColor=white">
+- `BackEnd` : <img src="https://img.shields.io/badge/Springboot-6DB33F?style=for-the-badge&logo=Springboot&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"> <img src="https://img.shields.io/badge/JPA-6DB33F?style=for-the-badge&logo=JPA&logoColor=white"> <img src="https://img.shields.io/badge/Lombok-000000?style=for-the-badge&logo=lombok&logoColor=white">
+- `DevOps` : <img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=GitLab&logoColor=white"> <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> <img src="https://img.shields.io/badge/Jira Software-0052CC?style=for-the-badge&logo=Jira Software&logoColor=white"> <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white">
 
 ### 4️⃣ 프로젝트 산출물
 
-  <img src ="/uploads/cd9a142dad02a88ac1ec7ce115a0430f/notion.png" alt="notion" width="60%"/>
+  <img src ="./PIC/notion.png" alt="notion" width="60%"/>
 
   <!-- <br> -->
   - [Notion](https://www.notion.so/SSAFY-2-PJT-93e0d2e267574a59af816a3b83e71f45)
@@ -104,5 +105,15 @@
 
 ## **프로젝트 영상**
 
-[![유튜브](/uploads/8cba2c0c79b4bbb3c72061c33a0712d3/we.png)](https://youtu.be/sYk2pQ_QgOQ)
+[![유튜브](./PIC/we.png)](https://youtu.be/sYk2pQ_QgOQ)
+
+## **프로젝트 결과**
+
+### 우수상
+
+<img src="./PIC/prize.jpg" alt="prize" width="40%"/>
+
+### UCC 우수상
+
+<img src="./PIC/ucc.jpg" alt="ucc" width="40%"/>
 

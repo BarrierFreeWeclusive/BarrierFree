@@ -13,4 +13,4 @@ RUN mkdir ./build
 ADD ./build ./build
 
 # container 실행 시 자동으로 실행할 command. nginx 시작함
-CMD ["npx". "serve", "-s", "build"]
+CMD ["npx", "serve", "-s", "build"]

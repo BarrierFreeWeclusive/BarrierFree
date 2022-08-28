@@ -145,7 +145,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void sendEmailwithUserKey(String email, String id) {
 		User user = userRepository.findByUserId(id);
-		String link = "https://barrierfree_url/user/email/certified?userNickname=" + user.getUserNickname()
+		String link = "https://barrierfree.cf/user/email/certified?userNickname=" + user.getUserNickname()
 				+ "&certified=" + user.getCertKey();
 		String message = mailContentBuilder.build(link);
 		try {
@@ -161,7 +161,7 @@ public class UserServiceImpl implements UserService {
 		User user = userRepository.findByUserNickname(userNickname);
 		return user;
 	}
-
+ 
 	// 이메일 인증이 되면, 사용자 유효 여부를 'n' -> 'y' 업데이트 하기
 	@Override
 	public void email_certified_update(User user) {
@@ -228,7 +228,7 @@ public class UserServiceImpl implements UserService {
 			StringBuilder sb = new StringBuilder();
 			sb.append("grant_type=authorization_code");
 			sb.append("&client_id=fa3c898eec92948b420f6f03b934acd1"); // REST_API_KEY 입력
-			sb.append("&redirect_uri=https://barrierfree_url/kakaologinpage"); // 인가코드 받은 redirect_uri 입력
+			sb.append("&redirect_uri=https://barrierfree.cf/kakaologinpage"); // 인가코드 받은 redirect_uri 입력
 			sb.append("&code=" + code);
 			bw.write(sb.toString());
 			bw.flush();

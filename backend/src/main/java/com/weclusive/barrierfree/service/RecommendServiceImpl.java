@@ -285,15 +285,14 @@ public class RecommendServiceImpl implements RecommendService {
 		StringBuilder sb = new StringBuilder();
 		List<Map<String, Object>> result = new LinkedList<>();
 		try {
-			String urlstr = "http://api.visitkorea.or.kr/openapi/service/rest/KorWithService/locationBasedList"
-					+ "?ServiceKey=90E0OY5f9CUd%2BGSJfMuFpPnny5XZ9Ks6RYqd0gV0LqOFeSC9A4B6VVnxmxDSUdtWx7auKWg2ALhbInFELnK8yQ%3D%3D"
+			String urlstr = "http://apis.data.go.kr/B551011/KorWithService/locationBasedList?MobileOS=ETC&MobileApp=BarrierFree&_type=json"
+					+ "&serviceKey=90E0OY5f9CUd%2BGSJfMuFpPnny5XZ9Ks6RYqd0gV0LqOFeSC9A4B6VVnxmxDSUdtWx7auKWg2ALhbInFELnK8yQ%3D%3D"
 					+ "&numOfRows=" + size + "&pageNo=" + page + "&mapX=" + lng + "&mapY=" + lat + "&radius=" + radius;
 
 			if (!contentTypeId.equals("0"))
 				urlstr += "&contentTypeId=" + contentTypeId;
 
-			urlstr += "&MobileOS=ETC&MobileApp=barrierfree&_type=json";
-
+			System.out.println(urlstr);
 			URL url = new URL(urlstr);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");
@@ -308,12 +307,12 @@ public class RecommendServiceImpl implements RecommendService {
 
 			JSONParser parser = new JSONParser();
 			JSONObject jsonObject = (JSONObject) parser.parse(sb.toString());
-
-			JSONObject parse_response = (JSONObject) jsonObject.get("response"); // response key값에 맞는 Value인 JSON객체를
-																					// 가져옵니다.
+			
+			JSONObject parse_response = (JSONObject) jsonObject.get("response"); // response key값에 맞는 Value인 JSON객체를 가져옵니다.
 			// response 로 부터 body 찾아오기
 			JSONObject parse_body = (JSONObject) parse_response.get("body");
 			// body 로 부터 items 받아오기
+			System.out.println(parse_body);
 			JSONObject parse_items = (JSONObject) parse_body.get("items");
 			// body 로 부터 items 받아오기
 			JSONArray parse_item = (JSONArray) parse_items.get("item");
@@ -329,11 +328,11 @@ public class RecommendServiceImpl implements RecommendService {
 					obj.put("firstimage", temp.get("firstimage"));
 				}
 				obj.put("addr1", temp.get("addr1"));
-
+				
 				char scrap_yn = 'n';
 //				 현재 사용자의 seq를 가져오는 api 필요
 				if (scrapRepository.countByDelYnAndScrapTypeAndUserSeqAndScrapData('n', '1', userSeq,
-						(long) temp.get("contentid")) > 0)
+						Long.parseLong((String) temp.get("contentid"))) > 0)
 					scrap_yn = 'y';
 				obj.put("scrap_yn", scrap_yn);
 

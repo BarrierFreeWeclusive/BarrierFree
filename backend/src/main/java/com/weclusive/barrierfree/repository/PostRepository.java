@@ -39,7 +39,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 			String endTime, Pageable pageable);
 
 	// 팔로우한 계정의 게시글을 최신순으로 정렬한 게시글 반환
-	@Query(value = "SELECT p FROM Post p WHERE p.delYn = 'n' AND p.userSeq IN (SELECT followingSeq FROM Follow WHERE userSeq = ?1) ORDER BY regDt DESC, postSeq ASC")
+	@Query(value = "SELECT p FROM Post p WHERE p.delYn = 'n' AND p.userSeq IN (SELECT followingSeq FROM Follow WHERE userSeq = ?1 AND delYn='n') ORDER BY regDt DESC, postSeq ASC")
 	public Page<Post> findFollowPost(int userSeq, Pageable pageable);
 
 	// 게시물 하나 전체 내용 가져오기

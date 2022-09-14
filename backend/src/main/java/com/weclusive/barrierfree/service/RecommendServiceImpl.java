@@ -322,8 +322,10 @@ public class RecommendServiceImpl implements RecommendService {
 				JSONObject temp = (JSONObject) o;
 				obj.put("contentid", temp.get("contentid"));
 				obj.put("title", temp.get("title"));
-				if (temp.get("firstimage") == null) {
-					obj.put("firstimage", tRepository.findByDelYnAndContentId('n', Long.parseLong(temp.get("contentid").toString())).getTourapiImage());
+				System.out.println("퍼스트이미지" + temp.get("firstimage"));
+				if (temp.get("firstimage").equals("")) {
+//					obj.put("firstimage", tRepository.findByDelYnAndContentId('n', Long.parseLong(temp.get("contentid").toString())).getTourapiImage());
+					obj.put("firstimage", "https://ifh.cc/g/3PePgp");
 				}else {
 					obj.put("firstimage", temp.get("firstimage"));
 				}

@@ -152,7 +152,6 @@ const Editor = ({
 
   return (
     <div>
-      <img src="/home/ubuntu/KakaoTalk_20220814_155047895_08.jpg"></img>
       <Box>
         <Grid container spacing={4}>
           <Grid item xs={1}></Grid>

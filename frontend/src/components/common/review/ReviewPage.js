@@ -94,12 +94,14 @@ const ReviewPage = () => {
         url: '/main/follow',
         method: 'get',
         params: {
-          userSeq: myuser.userSeq,
+          // userSeq: myuser.userSeq,
+          userSeq: 5,
           page: 1,
           size: 20,
         },
       }).then(function (res) {
         mysetItemList(res.data);
+        console.log("here", res.data);
         // console.log('bf');
       });
     } else {

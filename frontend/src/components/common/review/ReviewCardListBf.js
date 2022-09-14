@@ -58,7 +58,7 @@ const ReviewCardListBf = () => {
     <div class="list">
       {items.length === 0 ? (
         <div>
-          <h1>로딩중</h1>
+          <h1>베프의 게시글이 없습니다.</h1>
         </div>
       ) : (
         <div>

@@ -54,6 +54,7 @@ const ReviewPage = () => {
         },
       }).then(function (res) {
         mysetItemList(res.data);
+        console.log("EEEEEEEEEEE", res.data)
       });
     } else {
       alert('로그인이 필요합니다!');
